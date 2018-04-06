@@ -1,4 +1,4 @@
-# How to integrate the Appsfly Android Utils
+# How to integrate the Appsfly Ios Utils
 
 ### Step 1
 #### Add Cocoapods:
@@ -12,40 +12,16 @@ pod 'AFSDK'
 ```
 pod install
 ```
-> Note: If you are using a lower version of Android Studio, use 'compile' instead of 'implementation'
 
 ### Step 3
 #### Generated Secret-key
 
 Obtain a unique secret key from Appsfly.io (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). To keep the secret key secure, it is recommended to follow the below steps.
 
-1. Place this key in the gradle.properties file of the Android Project.
+1. Place this code in the Appdelegate file of the Ios Project.
 
-    `appsfly_app_key=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+    '[[AFAppsflyProvider defaultProvider] configureWithAppKey:@"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" andRepoUrl:@"https://hub.appsfly.io/executor/fetch-build"];'
 
-2. Add the following config to the manifest placeholders.
-
-```
-defaultConfig {
-    ...
-    manifestPlaceholders.appsfly_app_key = "${appsfly_app_key}"
-}
-```
-
-3. Add the following to the application module Manifest file.
-
-```
-<application
-    android:name=".MyApplication"
-    ...
-    android:label="My Application">
-
-    <meta-data
-        android:name="appsfly_app_key"
-        android:value="${appsfly_app_key}" />
-    ...
-/>
-```
 
 ### Step 3
 
