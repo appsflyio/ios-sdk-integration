@@ -19,8 +19,9 @@ pod install
 Obtain a unique secret key from Appsfly.io (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). To keep the secret key secure, it is recommended to follow the below steps.
 
 1. Place this code in the Appdelegate file of the Ios Project.
-
-    '[[AFAppsflyProvider defaultProvider] configureWithAppKey:@"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" andRepoUrl:@"https://hub.appsfly.io/executor/fetch-build"];'
+```
+    [[AFAppsflyProvider defaultProvider] configureWithAppKey:@"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" andRepoUrl:@"https://hub.appsfly.io/executor/fetch-build"];
+    ```
 
 
 ### Step 3
