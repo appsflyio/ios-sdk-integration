@@ -25,6 +25,17 @@ Obtain a unique secret key from Appsfly.io (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
     andRepoUrl:@"https://hub.appsfly.io/executor/fetch-build"];
     
 ```
+### Step 4
+```
+  [[AFAppsflyProvider defaultProvider] syncMicroApps:handles withCompletion:^(NSError * _Nullable error) {
+            [[AFMicroAppProvider defaultProvider] presentMicroApp:@"io.appsfly.prateek-dev" OverController:self withIntent:@"INTENT_NAME" andData:@{INTENT_DATA}];
+            self.loadButton.enabled = TRUE;
+            if (!error) {
+              -----
+            }
+        }];
+
+```
 
 
 
