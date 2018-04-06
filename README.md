@@ -28,13 +28,13 @@ Obtain a unique secret key from Appsfly.io (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ### Step 4
 ```
   [[AFAppsflyProvider defaultProvider] syncMicroApps:handles withCompletion:^(NSError * _Nullable error) {
-            [[AFMicroAppProvider defaultProvider] presentMicroApp:@"io.appsfly.prateek-dev" OverController:self withIntent:@"INTENT_NAME" andData:@{INTENT_DATA}];
+            [[AFMicroAppProvider defaultProvider] presentMicroApp:@"MICRO-APP-HANDLE" OverController:self withIntent:@"INTENT-NAME" andData:@{INTENT-DATA}];
             self.loadButton.enabled = TRUE;
             if (!error) {
               -----
             }
         }];
-
+//Replace MICRO-APP-HANDLE,INTENT-NAME & INTENT-DATA
 ```
 
 
